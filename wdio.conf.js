@@ -3,18 +3,18 @@ import { ReportAggregator, HtmlReporter} from '@rpii/wdio-html-reporter' ;
 exports.config = {
     runner: 'local',
     specs: [
-        './test/specs/**/*.e2e.js'
+        './test/specs/**/orders.e2e.js'
     ],
     exclude: [],
     maxInstances: 10,
     capabilities: [{
         maxInstances: 5,
-        browserName: 'chrome', // firefox, MicrosoftEdge
+        browserName: 'firefox', // firefox, MicrosoftEdge
         acceptInsecureCerts: true,
         'goog:chromeOptions': {
             args: [
                 // '--window-size=1920,1080',
-                // '--headless',
+                '--headless',
                 '--no-sandbox',
                 '--disable-gpu',
                 '--disable-setuid-sandbox',
@@ -31,7 +31,7 @@ exports.config = {
     }],
     logLevel: 'warn',
     bail: 0,
-    baseUrl: 'http://www.czechitas.cz',
+    baseUrl: 'http://czechitas-datestovani-hackathon.cz/en/',
     waitforTimeout: 10000,
     connectionRetryTimeout: 120000,
     connectionRetryCount: 3,
