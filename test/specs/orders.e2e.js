@@ -1,6 +1,6 @@
 describe('Page', () => {
 
-    it('should open page', () => {
+    it('Should open orders', () => {
         browser.reloadSession();
         browser.url('/login?back=my-account');
         browser.pause(2000);
@@ -28,7 +28,7 @@ describe('Page', () => {
             expect(cols[3].getText()).toMatch(/(Bank wire|Payment by check|Payment by card)/);
             expect(cols[4].getText()).toMatch(/(Awaiting check payment|Awaiting bank wire payment)/);
 
-            // tabulka obsahuje jěště další dvě kolonky, ale třeba u invoice neni vůbec nic napsané, takže vůbec nevím co mam očekávat, že tam bude. Vzhledem k tomu, že je to faktura, tak tam asi bude jen číslo faktury, ale nevím.
+            // tabulka obsahuje jěště další dvě kolonky, ale třeba u invoice neni vůbec nic napsané, takže vůbec nevím co mam očekávat, že tam bude. Vzhledem k tomu, že je to faktura, tak tam asi bude jen číslo ale nevím.
             
         });
     });
