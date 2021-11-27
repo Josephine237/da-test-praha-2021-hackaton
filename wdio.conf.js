@@ -3,7 +3,7 @@ import { ReportAggregator, HtmlReporter} from '@rpii/wdio-html-reporter' ;
 exports.config = {
     runner: 'local',
     specs: [
-        './test/specs/**/shopingCard.e2e.js'
+        './test/specs/**/orders.e2e.js'
     ],
     exclude: [],
     maxInstances: 10,
