@@ -1,6 +1,6 @@
 describe('Page', () => {
 
-    it('should open page', () => {
+    it('should open shopping card', () => {
         browser.reloadSession();
         browser.url('/login?back=my-account');
         browser.pause(2000);
